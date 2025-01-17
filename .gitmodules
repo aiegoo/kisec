@@ -1,0 +1,3 @@
+[submodule "newsgenerator"]
+	path = newsgenerator
+	url = https://github.com/vitorfs/woid.git
