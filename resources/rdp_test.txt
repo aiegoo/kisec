@@ -1,0 +1,14 @@
+@echo off
+FOR /F "tokens=3" %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v PortNumber') do set PORT=%%a
+IF %PORT%==0xcb20 (
+	echo RDP 포트가 52000번이므로 3389번으로 변경합니다.
+	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v PortNumber /d 0xd3d /t REG_DWORD /f
+) ELSE IF %PORT%==0xd3d (
+	echo RDP 포트가 3389번이므로 52000번으로 변경합니다.
+	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v PortNumber /d 0xcb20 /t REG_DWORD /f
+) ELSE (
+	echo RDP 포트가 52000, 3389 모두 아닙니다.
+	echo 포트 번호: %PORT%
+)
+net stop "Remote Desktop Services" /y
+net start "Remote Desktop Services"
