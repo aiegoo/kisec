@@ -1,3 +1,6 @@
 [submodule "newsgenerator"]
 	path = newsgenerator
 	url = https://github.com/vitorfs/woid.git
+[submodule "news-please"]
+	path = news-please
+	url = git@github.com:fhamborg/news-please
