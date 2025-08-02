@@ -1,4 +1,4 @@
-## terminal interaction
+8## terminal interaction
 
 ```bash
 PS Microsoft.PowerShell.Core\FileSystem::\\wsl.localhost\Ubuntu-22.04\home\hsyyu\SecurityProject> Get-ExecutionPolicy -List
@@ -401,6 +401,7 @@ PS C:\SecurityProject> Write-Host "`n✅ Sysmon + YARA integration ready!" -Fore
 
 ```
 <img alt="image" src="https://github.com/user-attachments/assets/11624dc9-30ea-4c74-9a7f-9884a713f033" />
+<img width="2851" height="1799" alt="copyImage" src="https://github.com/user-attachments/assets/27b8bc31-6dc7-4e2b-a2b3-3cd626263985" />
 
 ### what's done so far
 [technical implementation](https://github.com/aiegoo/kisec-final/issues/6)
